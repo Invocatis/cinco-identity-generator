@@ -186,18 +186,18 @@ var application = {
       }
     });
 
-    // document.querySelector("#desktop").addEventListener(
-    //   "touchstart",
-    //   (event) => {
-    //     if (!state.booted) desktop.boot();
-    //     document
-    //       .querySelector("#window-prompt")
-    //       .addEventListener("touchstart", () => {
-    //         sounds.prompt();
-    //         voice_recognition.listen();
-    //       });
-    //   },
-    //   { once: true },
-    // );
+    document.querySelector("#desktop").addEventListener(
+      "touchstart",
+      (event) => {
+        if (!state.booted) desktop.boot();
+        document
+          .querySelector("#window-prompt")
+          .addEventListener("touchstart", () => {
+            sounds.prompt();
+            voice_recognition.listen();
+          });
+      },
+      { once: true },
+    );
   },
 };
