@@ -156,7 +156,6 @@ let sequence = {
     let response = await fetch("/sequences/");
 
     if (response.status === 404) {
-      sequences = default_sequences;
     } else {
       let folders = await response.json();
 
